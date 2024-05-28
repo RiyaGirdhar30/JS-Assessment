@@ -1,0 +1,33 @@
+const nftCompany = []; 
+
+function addNFT(_nftEmployeeName, _salary, _employeePosition,_employeeCity) {
+  const nft = {
+    employeeName: _nftEmployeeName,
+    salary: _salary,
+    employeePosition: _employeePosition,
+    employeeCity: _employeeCity,
+  };
+  nftCompany.push(nft);
+  console.log("Added NFT: " + _nftEmployeeName);
+}
+
+function listNFTCompany() {
+  for (let i = 0; i < nftCompany.length; i++) {
+    console.log("\nID\t: " + (i + 1));
+    console.log("Employee Name\t: " + nftCompany[i].employeeName);
+    console.log("Salary\t: " + nftCompany[i].salary);
+    console.log("Employee Position\t: " + nftCompany[i].employeePosition);
+    console.log("Employee City\t: " + nftCompany[i].employeeCity);
+  }
+}
+
+function viewNFTs() {
+  console.log("\nTotal NFTs: " + nftCompany.length);
+}
+addNFT("Riya Girdhar", 100000, "CEO", "Mumbai");
+addNFT("Sonam", 50000, "Manager", "Delhi");
+addNFT("Adarsh", 25000, "Assistant", "Saharnpur");
+addNFT("Poonam", 10000, "Receptionist", "Rajgarh");
+
+listNFTCompany();
+viewNFTs();
